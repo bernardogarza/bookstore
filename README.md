@@ -1,3 +1,13 @@
+# Bookstore
+
+
+## Milestone 1
+
+
+* Deleted unnecesary files.
+
+* Pushed to heroku: https://young-badlands-40149.herokuapp.com/
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
