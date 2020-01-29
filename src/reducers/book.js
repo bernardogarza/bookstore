@@ -1,17 +1,19 @@
+const randomId = () => Math.ceil(Math.random() * 100);
+
 const initialState = {
     books: [
         {
-            id: 1,
+            id: randomId(),
             title: 'Steve Jobs',
             category: 'Biography'
         },
         {
-            id: 2,
+            id: randomId(),
             title: 'It',
             category: 'Horror'
         },
         {
-            id: 3,
+            id: randomId(),
             title: 'Ruby on Rails Tutorials',
             category: 'Learning'
         }
@@ -19,7 +21,15 @@ const initialState = {
 }
 
 const bookReducer = (state = initialState, action) => {
-    return state
+    switch(action.type) {
+        case 'ADD_BOOK': return {
+            books: [...state.books, action.book]
+        };
+        case 'REMOVE_BOOK': return {
+            books: state.books.map(book => book.id !== action.id)
+        }
+        default: return state
+    }
 }
 
 export default bookReducer;

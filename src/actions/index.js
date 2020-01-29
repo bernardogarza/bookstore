@@ -1,10 +1,9 @@
-// const ADD_BOOK = 'ADD_BOOK'
-// const REMOVE_BOOK = 'REMOVE_BOOK'
+export const ADD_BOOK = book => ({
+    type: 'ADD_BOOK',
+    book
+})
 
-// const mapDispatchToProps = dispatch => {
-//   ADD_BOOK(book) {
-//     dispatch({
-//       type: ADD_BOOK
-//     })
-//   }
-// }
+export const REMOVE_BOOK = book => ({
+    type: 'REMOVE_BOOK',
+    book
+})
