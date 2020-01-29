@@ -26,7 +26,8 @@ const mapStateToProps = state => ({
 });
 
 BooksList.propTypes = {
-  books: PropTypes.isRequired,
+  // eslint-disable-next-line react/forbid-prop-types
+  books: PropTypes.array.isRequired,
 };
 
 export default connect(mapStateToProps)(BooksList);
