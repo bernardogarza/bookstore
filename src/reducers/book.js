@@ -1,19 +1,19 @@
-const randomId = () => Math.ceil(Math.random() * 100);
+import uniqid from 'uniqid';
 
 const initialState = {
   books: [
     {
-      id: randomId(),
+      id: uniqid(),
       title: 'Steve Jobs',
       category: 'Biography',
     },
     {
-      id: randomId(),
+      id: uniqid(),
       title: 'It',
       category: 'Horror',
     },
     {
-      id: randomId(),
+      id: uniqid(),
       title: 'Ruby on Rails Tutorials',
       category: 'Learning',
     },
