@@ -1,16 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import './book.scss';
+
 const Book = ({
   id, title, category, handleRemoveBook,
 }) => (
-  <tr>
-    <td>{id}</td>
-    <td>{title}</td>
-    <td>{category}</td>
-    <td><button type="button" onClick={() => handleRemoveBook(id)}>X</button></td>
-  </tr>
-);
+    <tr>
+      <td>{category}</td>
+      <td>{title}</td>
+      <td><button type="button" onClick={() => handleRemoveBook(id)}>X</button></td>
+    </tr>
+  );
 
 Book.propTypes = {
   id: PropTypes.string.isRequired,
