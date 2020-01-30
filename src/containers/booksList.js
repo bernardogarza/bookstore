@@ -7,31 +7,37 @@ import { REMOVE_BOOK, CHANGE_FILTER } from '../actions';
 import CategoryFilter from '../components/categoryFilter';
 
 
-const BooksList = ({ books, filter, handleRemoveBook, handleFilterChange }) => (
-  <div>
-    <CategoryFilter handleFilterChange={() => handleFilterChange(category)} />
-    <table>
-      <thead>
-        <tr>
-          <td>ID</td>
-          <td>Title</td>
-          <td>Category</td>
-        </tr>
-      </thead>
-      <tbody>
-        {books.map(book => (
-          <Book
-            id={book.id}
-            title={book.title}
-            category={book.category}
-            key={uniqid()}
-            handleRemoveBook={() => handleRemoveBook(book.id)}
-          />
-        ))}
-      </tbody>
-    </table>
-  </div>
-);
+const BooksList = ({
+  books, filter, handleRemoveBook, handleFilterChange
+}) => {
+  const booksFiltered = filter === 'All' ? books : books.filter(book => book.category === filter);
+
+  return (
+    <div>
+      <CategoryFilter handleFilterChange={() => handleFilterChange(category)} />
+      <table>
+        <thead>
+          <tr>
+            <td>ID</td>
+            <td>Title</td>
+            <td>Category</td>
+          </tr>
+        </thead>
+        <tbody>
+          {books.map(book => (
+            <Book
+              id={book.id}
+              title={book.title}
+              category={book.category}
+              key={uniqid()}
+              handleRemoveBook={() => handleRemoveBook(book.id)}
+            />
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+};
 
 
 const mapStateToProps = state => ({
