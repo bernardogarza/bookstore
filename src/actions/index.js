@@ -3,7 +3,7 @@ export const ADD_BOOK = book => ({
   book,
 });
 
-export const REMOVE_BOOK = book => ({
+export const REMOVE_BOOK = id => ({
   type: 'REMOVE_BOOK',
-  book,
+  id,
 });
