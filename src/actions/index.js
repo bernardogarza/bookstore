@@ -7,3 +7,8 @@ export const REMOVE_BOOK = id => ({
   type: 'REMOVE_BOOK',
   id,
 });
+
+export const CHANGE_FILTER = category => ({
+  type: 'CHANGE_FILTER',
+  category,
+});
