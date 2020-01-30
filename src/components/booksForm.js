@@ -25,7 +25,7 @@ class BooksForm extends Component {
         <input type="text" placeholder="Title" name="title" onChange={this.handleChange.bind(this)} />
         <select onChange={this.handleChange.bind(this)} name="category">
           {
-            categories.map(category => <option value={category} key={uniqid()}>{category}</option>)
+            categories.map(category => <option value={category} >{category}</option>)
           }
         </select>
         <button type="submit">Add Book</button>
