@@ -10,7 +10,7 @@ const Book = ({ id, title, category }) => (
 );
 
 Book.propTypes = {
-  id: PropTypes.number.isRequired,
+  id: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   category: PropTypes.string.isRequired,
 };

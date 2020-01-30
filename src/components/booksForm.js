@@ -4,7 +4,7 @@ import uniqid from 'uniqid';
 const categories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
 
 const BooksForm = () => (
-  <div>
+  <form>
     <input type="text" placeholder="Title" />
     <select>
       {
@@ -12,7 +12,7 @@ const BooksForm = () => (
       }
     </select>
     <button type="submit">Add Book</button>
-  </div>
+  </form>
 );
 
 export default BooksForm;
