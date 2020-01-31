@@ -27,7 +27,8 @@ class BooksForm extends Component {
     const { state } = this;
     if (state.title !== '') {
       addBook(this.state);
-      this.setState({ id: uniqid() });
+      this.setState({ id: uniqid(), title: '' });
+      document.getElementById('create-course-form').value = '';
     }
   }
 
@@ -36,7 +37,7 @@ class BooksForm extends Component {
       <div className="form-area">
         <div className="title-form">ADD NEW BOOK</div>
         <form className="books-form">
-          <input type="text" placeholder="Book title" name="title" onChange={this.handleChange.bind(this)} />
+          <input id="create-course-form" type="text" placeholder="Book title" name="title" onChange={this.handleChange.bind(this)} />
           <select onChange={this.handleChange.bind(this)} name="category" className="select-box">
             {
               categories.map(category => (
@@ -50,7 +51,7 @@ class BooksForm extends Component {
               <path d="M0-.75h24v24H0z" fill="none" />
             </svg>
           </span>
-          <button type="submit" onClick={this.handleSubmit.bind(this)}>Add Book</button>
+          <button type="submit" onClick={this.handleSubmit.bind(this)}>ADD BOOK</button>
         </form>
       </div>
     );
