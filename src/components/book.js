@@ -6,12 +6,15 @@ import './book.scss';
 const Book = ({
   id, title, category, handleRemoveBook,
 }) => (
-    <tr>
-      <td>{category}</td>
-      <td>{title}</td>
-      <td><button type="button" onClick={() => handleRemoveBook(id)}>X</button></td>
-    </tr>
-  );
+  <tr className="row">
+    <td className="left-column">
+      <span className="category">{category}</span>
+      <br />
+      <span className="book-title">{title}</span>
+    </td>
+    <td className="right-column"><button type="button" onClick={() => handleRemoveBook(id)}>REMOVE BOOK</button></td>
+  </tr>
+);
 
 Book.propTypes = {
   id: PropTypes.string.isRequired,

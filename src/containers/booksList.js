@@ -33,7 +33,6 @@ const BooksList = ({
   );
 };
 
-
 const mapStateToProps = state => ({
   books: state.bookReducer.books,
   filter: state.filterReducer.category,
