@@ -18,6 +18,7 @@
   }
 
   .books-form {
+    display: flex;
     input {
       width: 664px;
       height: 45px;
@@ -28,21 +29,6 @@
       padding-left: 10px;
     }
   }
-}
-
-.select-box {
-  width: 285px;
-  height: 45px;
-  border-radius: 4px;
-  border: solid 1px #e8e8e8;
-  background-color: #ffffff;
-  appearance: none;
-  margin-left: 20px;
-}
-
-.icon-select-mate {
-  margin-left: -25px;
-  padding-top: 20px;
 }
 
 button {
@@ -57,4 +43,33 @@ button {
   color: #ffffff;
   font-weight: bold;
   margin-left: 28px;
+  cursor: pointer;
+}
+
+.styled-select {
+  width: 285px;
+  height: 45px;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #ffffff;
+  overflow: hidden;
+  background: url(../images/sort-down-solid.svg) no-repeat right;
+  margin-left: 28px;
+  background-color: white;
+  
+  select {
+    background: transparent;
+    width: 268px;
+    padding-left: 5px;
+    padding-top: 12px;
+    font-size: 16px;
+    line-height: 1;
+    border: 1px solid #ccc;
+    border: 0;
+    border-radius: 0;
+    height: 34px;
+    -webkit-appearance: none;
+    letter-spacing: -0.15px;
+    color: #c4c4c4;
+  }
 }
