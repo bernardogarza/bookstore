@@ -6,6 +6,7 @@ import Book from '../components/book';
 import { REMOVE_BOOK, CHANGE_FILTER } from '../actions';
 import CategoryFilter from '../components/categoryFilter';
 
+import './bookList.scss';
 
 const BooksList = ({
   books, filter, handleRemoveBook, handleFilterChange,
@@ -16,13 +17,6 @@ const BooksList = ({
     <div>
       <CategoryFilter handleFilterChange={category => handleFilterChange(category)} />
       <table>
-        <thead>
-          <tr>
-            <td>ID</td>
-            <td>Title</td>
-            <td>Category</td>
-          </tr>
-        </thead>
         <tbody>
           {booksFiltered.map(book => (
             <Book
@@ -38,7 +32,6 @@ const BooksList = ({
     </div>
   );
 };
-
 
 const mapStateToProps = state => ({
   books: state.bookReducer.books,

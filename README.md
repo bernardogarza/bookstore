@@ -6,12 +6,18 @@
 
 **[Kalib Hackin](https://github.com/NaguiHW)** - naguihw@gmail.com
 
-## Milestone 1
+## Milestone 5
 
 
-* Deleted unnecesary files.
+* Added Styling.
 
 * Pushed to heroku: https://young-badlands-40149.herokuapp.com/
+
+## Screenshot
+
+
+![BookStore](screenshot/image.png?raw=true "BookStore")
+
 
 #
 

@@ -3,11 +3,14 @@ import { Provider } from 'react-redux';
 import BooksList from '../containers/booksList';
 import store from '../reducers/index';
 import BooksForm from './booksForm';
+import './app.scss';
 
 const App = () => (
   <Provider store={store}>
-    <BooksList />
-    <BooksForm />
+    <div className="container">
+      <BooksList />
+      <BooksForm />
+    </div>
   </Provider>
 );
 
