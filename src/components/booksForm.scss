@@ -1,0 +1,75 @@
+.form-area {
+  width: 1200px;
+  margin: 25px auto;
+  border-top: solid 1px #e8e8e8;
+  padding-bottom: 25px;
+
+  .title-form {
+    margin: 25px 0;
+    width: 174px;
+    height: 24px;
+    font-size: 20px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: -0.18px;
+    color: #888888;
+  }
+
+  .books-form {
+    display: flex;
+    input {
+      width: 664px;
+      height: 45px;
+      border-radius: 4px;
+      border: solid 1px #e8e8e8;
+      background-color: #ffffff;
+      font-size: 20px;
+      padding-left: 10px;
+    }
+  }
+}
+
+button {
+  width: 184px;
+  height: 45px;
+  border-radius: 3px;
+  background-color: #0290ff;
+  border: none;
+  font-size: 13px;
+  font-weight: 300;  
+  letter-spacing: 0.5px;
+  color: #ffffff;
+  font-weight: bold;
+  margin-left: 28px;
+  cursor: pointer;
+}
+
+.styled-select {
+  width: 285px;
+  height: 45px;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #ffffff;
+  overflow: hidden;
+  background: url(../images/sort-down-solid.svg) no-repeat right;
+  margin-left: 28px;
+  background-color: white;
+  
+  select {
+    background: transparent;
+    width: 268px;
+    padding-left: 5px;
+    padding-top: 12px;
+    font-size: 16px;
+    line-height: 1;
+    border: 1px solid #ccc;
+    border: 0;
+    border-radius: 0;
+    height: 34px;
+    -webkit-appearance: none;
+    letter-spacing: -0.15px;
+    color: #c4c4c4;
+  }
+}
