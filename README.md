@@ -1,5 +1,5 @@
 # Bookstore
-> This is a React and Redux project that helps the users to keep track of the books they own.
+This is a React and Redux project that helps the users to keep track of the books they own.
 
 
 ## Contributors
