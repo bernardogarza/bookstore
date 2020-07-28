@@ -1,5 +1,5 @@
 # Bookstore
-This is a React and Redux app that helps the users to keep track of the books they own and filter them by category.
+This project is built with React and Redux. It allows users to keep track of the books they own and filter them by category.
 
 
 ## Contributors
