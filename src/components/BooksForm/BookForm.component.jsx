@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import uniqid from 'uniqid';
 import PropTypes from 'prop-types';
-import { ADD_BOOK } from '../actions';
-import './booksForm.scss';
+import { ADD_BOOK } from '../../actions';
+import './BookForm.styles.scss';
 
 const categories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
 
@@ -37,17 +37,25 @@ class BooksForm extends Component {
       <div className="form-area">
         <div className="title-form">ADD NEW BOOK</div>
         <form className="books-form">
-          <input id="create-course-form" type="text" placeholder="Book title" name="title" onChange={this.handleChange.bind(this)} />
+          <input
+            id="create-course-form"
+            type="text"
+            placeholder="Book title"
+            name="title"
+            onChange={this.handleChange.bind(this)}
+          />
           <div className="styled-select">
             <select onChange={this.handleChange.bind(this)} name="category" className="select-box">
-              {
-                categories.map(category => (
-                  <option value={category} key={category}>{category}</option>
-                ))
-              }
+              {categories.map((category) => (
+                <option value={category} key={category}>
+                  {category}
+                </option>
+              ))}
             </select>
           </div>
-          <button type="submit" onClick={this.handleSubmit.bind(this)}>ADD BOOK</button>
+          <button type="submit" onClick={this.handleSubmit.bind(this)}>
+            ADD BOOK
+          </button>
         </form>
       </div>
     );
@@ -58,8 +66,8 @@ BooksForm.propTypes = {
   addBook: PropTypes.func.isRequired,
 };
 
-const mapDispatchToProps = dispatch => ({
-  addBook: book => dispatch(ADD_BOOK(book)),
+const mapDispatchToProps = (dispatch) => ({
+  addBook: (book) => dispatch(ADD_BOOK(book)),
 });
 
 export default connect(null, mapDispatchToProps)(BooksForm);
