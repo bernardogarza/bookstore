@@ -26,7 +26,7 @@ describe('Actions', () => {
       type: 'REMOVE_BOOK',
       id,
     };
-    console.log(actions.REMOVE_BOOK(id), expectedAction);
+    expect(actions.REMOVE_BOOK(id)).toEqual(expectedAction);
   });
 
   test('should create an action to add book', () => {
@@ -40,6 +40,6 @@ describe('Actions', () => {
       type: 'CHANGE_FILTER',
       category,
     };
-    console.log(actions.CHANGE_FILTER(category), expectedAction);
+    expect(actions.CHANGE_FILTER(category)).toEqual(expectedAction);
   });
 });
